@@ -1,6 +1,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export async function GET() {
+  console.log("SUCCESS!");
   const { getRoles } = getKindeServerSession();
   const roles = await getRoles();
 
