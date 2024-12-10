@@ -6,8 +6,16 @@ export async function GET() {
 
   // speak about roles checking vs permissions checking
   if (roles?.some((role) => role.key === "admin")) {
-    return Response.redirect("http://localhost:3000/admin");
+    return Response.redirect(
+      process.env.NODE_ENV == "development"
+        ? "http://localhost:3000/admin"
+        : "https://admin.thelibraryengine.com"
+    );
   }
 
-  return Response.redirect("http://localhost:3000/app");
+  return Response.redirect(
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/app"
+      : "https://app.thelibraryengine.com"
+  );
 }
