@@ -9,13 +9,13 @@ export async function GET() {
     return Response.redirect(
       process.env.NODE_ENV == "development"
         ? "http://localhost:3000/admin"
-        : "https://admin.thelibraryengine.com"
+        : "https://www.thelibraryengine.com/admin"
     );
   }
 
   return Response.redirect(
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000/app"
-      : "https://app.thelibraryengine.com"
+      : "https://www.thelibraryengine.com/app"
   );
 }
