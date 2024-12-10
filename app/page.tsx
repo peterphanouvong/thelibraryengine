@@ -145,7 +145,9 @@ export default async function Home() {
                   <p className="text-sm font-semibold text-gray-600 mb-2">
                     {testimonial.type}
                   </p>
-                  <p className="text-lg mb-4">"{testimonial.quote}"</p>
+                  <p className="text-lg mb-4">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
                   <p className="text-sm text-gray-600">{testimonial.author}</p>
                 </CardContent>
               </Card>
